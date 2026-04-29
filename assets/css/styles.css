@@ -244,6 +244,74 @@ a {
   background-color: #fe0353;
 }
 
+/*=============== FOOTER ===============*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 3rem 0 2rem;
+  background-color: #fe0353;
+  color: var(--white-color);
+  z-index: var(--z-fixed);
+}
+
+.footer__content {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer__section {
+  display: grid;
+  gap: .75rem;
+}
+
+.footer__title {
+  font-size: 1.125rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.footer__text {
+  line-height: 1.7;
+}
+
+.footer__link {
+  color: var(--white-color);
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.footer__social-link {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.footer__social-link:hover {
+  opacity: .8;
+  transform: translateY(-2px);
+}
+
+body {
+  padding-bottom: 24rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3rem;
+  }
+
+  body {
+    padding-bottom: 17rem;
+  }
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
