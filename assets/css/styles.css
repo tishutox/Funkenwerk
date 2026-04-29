@@ -70,7 +70,6 @@ a {
   left: 0;
   width: 100%;
   background-color: #fe0353;
-  box-shadow: 0 2px 16px rgba(254, 3, 83, .3);
   z-index: var(--z-fixed);
 }
 
@@ -246,6 +245,13 @@ a {
 }
 
 @media screen and (max-width: 1118px) {
+  /* Disable sticky :hover on touch — only JS classes control dropdowns */
+  .dropdown__item:hover .dropdown__menu,
+  .dropdown__subitem:hover > .dropdown__submenu {
+    max-height: 0;
+    transition: max-height .4s ease-out;
+  }
+
   .dropdown__item.show-dropdown > .dropdown__menu,
   .dropdown__subitem.show-submenu > .dropdown__submenu {
     max-height: 1000px;

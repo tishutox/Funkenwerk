@@ -22,7 +22,8 @@ const isMobile = window.matchMedia('(max-width: 1118px)')
 const closeMenuAfterLinkTap = () => {
     const navMenu = document.getElementById('nav-menu')
     const navToggle = document.getElementById('nav-toggle')
-    const navLinks = document.querySelectorAll('.dropdown__link, .dropdown__sublink')
+    // Only select real anchor links, not <div> submenu triggers
+    const navLinks = document.querySelectorAll('a.dropdown__link, a.dropdown__sublink')
 
     if(!navMenu || !navToggle) return
 
