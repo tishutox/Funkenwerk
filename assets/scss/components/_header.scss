@@ -69,6 +69,7 @@
          overflow: auto;
          pointer-events: none;
          opacity: 0;
+         z-index: 2;
          transition: top .4s, opacity .3s;
 
          &::-webkit-scrollbar{
@@ -168,5 +169,17 @@
    }
    &__sublink{
       background-color: var(--black-color-lighten);
+   }
+}
+
+@media screen and (max-width: 1118px){
+   .dropdown__item.show-dropdown > .dropdown__menu,
+   .dropdown__subitem.show-submenu > .dropdown__submenu{
+      max-height: 1000px;
+      transition: max-height .4s ease-in;
+   }
+
+   .dropdown__item.show-dropdown > .nav__link .dropdown__arrow{
+      transform: rotate(180deg);
    }
 }

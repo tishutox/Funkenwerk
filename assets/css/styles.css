@@ -139,6 +139,7 @@ a {
     overflow: auto;
     pointer-events: none;
     opacity: 0;
+    z-index: 2;
     transition: top .4s, opacity .3s;
   }
   .nav__menu::-webkit-scrollbar {
@@ -244,6 +245,18 @@ a {
   background-color: #fe0353;
 }
 
+@media screen and (max-width: 1118px) {
+  .dropdown__item.show-dropdown > .dropdown__menu,
+  .dropdown__subitem.show-submenu > .dropdown__submenu {
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+  }
+
+  .dropdown__item.show-dropdown > .nav__link .dropdown__arrow {
+    transform: rotate(180deg);
+  }
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   position: fixed;
@@ -253,7 +266,7 @@ a {
   padding: 3rem 0 2rem;
   background-color: #fe0353;
   color: var(--white-color);
-  z-index: var(--z-fixed);
+  z-index: var(--z-tooltip);
 }
 
 .footer__content {

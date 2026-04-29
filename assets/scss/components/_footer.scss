@@ -7,7 +7,7 @@
    padding: 3rem 0 2rem;
    background-color: #fe0353;
    color: var(--white-color);
-   z-index: var(--z-fixed);
+   z-index: var(--z-tooltip);
 
    &__content{
       display: grid;
