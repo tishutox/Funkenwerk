@@ -252,6 +252,11 @@ a {
     transition: max-height .4s ease-out;
   }
 
+  /* Reset hover arrow so JS class is the sole controller */
+  .dropdown__item:hover .dropdown__arrow {
+    transform: none;
+  }
+
   .dropdown__item.show-dropdown > .dropdown__menu,
   .dropdown__subitem.show-submenu > .dropdown__submenu {
     max-height: 1000px;
