@@ -63,6 +63,27 @@ a {
   margin-inline: 1.5rem;
 }
 
+.main {
+  padding-top: calc(var(--header-height) + 1.5rem);
+}
+
+.banner {
+  margin-top: 1rem;
+}
+
+.banner__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .banner__image {
+    border-radius: 16px;
+  }
+}
+
 /*=============== HEADER ===============*/
 .header {
   position: fixed;
@@ -352,6 +373,10 @@ body {
 @media screen and (min-width: 1118px) {
   .container {
     margin-inline: auto;
+  }
+
+  .main {
+    padding-top: calc(var(--header-height) + 3.5rem);
   }
 
   .nav {
