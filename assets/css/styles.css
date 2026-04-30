@@ -284,8 +284,12 @@ a {
     transition: max-height .4s ease-out;
   }
 
-  /* Reset hover arrow so JS class is the sole controller */
+  /* Reset hover arrow and plus so JS class is the sole controller */
   .dropdown__item:hover .dropdown__arrow {
+    transform: none;
+  }
+
+  .dropdown__subitem:hover > .dropdown__link .dropdown__add {
     transform: none;
   }
 
