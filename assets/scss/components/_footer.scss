@@ -24,6 +24,15 @@
 
    &__text{
       line-height: 1.7;
+
+      a{
+         color: var(--white-color);
+
+         &:hover{
+            color: var(--white-color);
+            opacity: .85;
+         }
+      }
    }
 
    &__link{

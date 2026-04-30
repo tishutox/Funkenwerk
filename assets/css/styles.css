@@ -337,6 +337,15 @@ a {
   line-height: 1.7;
 }
 
+.footer__text a {
+  color: var(--white-color);
+}
+
+.footer__text a:hover {
+  color: var(--white-color);
+  opacity: .85;
+}
+
 .footer__link {
   color: var(--white-color);
 }
