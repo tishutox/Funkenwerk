@@ -302,10 +302,6 @@ a {
   .dropdown__subitem.show-submenu > .dropdown__link .dropdown__add {
     transform: rotate(45deg);
   }
-
-  .dropdown__subitem.show-submenu > .dropdown__link .dropdown__add {
-    transform: rotate(45deg);
-  }
 }
 
 /*=============== FOOTER ===============*/
