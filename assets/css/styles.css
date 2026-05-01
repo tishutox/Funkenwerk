@@ -441,6 +441,14 @@ a {
   font-size: .95rem;
 }
 
+.startups-form__captcha-image {
+  display: block;
+  width: min(240px, 100%);
+  height: auto;
+  border-radius: 8px;
+  margin-block: .5rem;
+}
+
 .startups-form__required {
   margin-top: .35rem;
 }

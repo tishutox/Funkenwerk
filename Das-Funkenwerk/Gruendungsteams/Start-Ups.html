@@ -419,7 +419,8 @@
 
                   <div class="startups-form__field startups-form__field--full">
                      <p class="startups-form__captcha">Bitte geben Sie den abgebildeten Code in das folgende Feld ein:</p>
-                     <input name="captcha" type="text" aria-label="Sicherheitscode">
+                     <img id="startups-captcha-image" class="startups-form__captcha-image" src="" alt="Sicherheitscode als Bild">
+                     <input id="startups-captcha-input" name="captcha" type="text" aria-label="Sicherheitscode" autocomplete="off">
                   </div>
 
                   <div class="startups-form__field startups-form__field--full">
@@ -529,6 +530,69 @@
 
    <!--=============== MAIN JS ===============-->
    <script src="../../assets/js/main.js"></script>
+   <script>
+      (() => {
+         const captchaImage = document.getElementById('startups-captcha-image')
+         const captchaInput = document.getElementById('startups-captcha-input')
+         const form = document.querySelector('.startups-form__grid')
+
+         if(!captchaImage || !captchaInput || !form) return
+
+         const characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+
+         const randomChar = () => {
+            const index = Math.floor(Math.random() * characters.length)
+            return characters[index]
+         }
+
+         const generateCaptchaCode = (length = 6) => {
+            let code = ''
+
+            for(let i = 0; i < length; i += 1){
+               code += randomChar()
+            }
+
+            return code
+         }
+
+         const buildCaptchaSvg = (code) => {
+            const noiseLines = Array.from({length: 4}).map(() => {
+               const x1 = Math.floor(Math.random() * 240)
+               const y1 = Math.floor(Math.random() * 70)
+               const x2 = Math.floor(Math.random() * 240)
+               const y2 = Math.floor(Math.random() * 70)
+               return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#f5a6bf" stroke-width="1"/>`
+            }).join('')
+
+            const textChars = code.split('').map((char, idx) => {
+               const x = 22 + idx * 34
+               const y = 44 + Math.floor(Math.random() * 9)
+               const rotation = Math.floor(Math.random() * 16) - 8
+               return `<text x="${x}" y="${y}" transform="rotate(${rotation} ${x} ${y})" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#fe0353">${char}</text>`
+            }).join('')
+
+            return `<svg xmlns="http://www.w3.org/2000/svg" width="240" height="70" viewBox="0 0 240 70" role="img" aria-label="Sicherheitscode"><rect width="240" height="70" rx="8" fill="#ffffff" stroke="#ffd0df"/>${noiseLines}${textChars}</svg>`
+         }
+
+         const code = generateCaptchaCode()
+         captchaImage.dataset.code = code
+         captchaImage.src = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(buildCaptchaSvg(code))}`
+
+         form.addEventListener('submit', (event) => {
+            const enteredCode = captchaInput.value.trim().toUpperCase()
+            const expectedCode = (captchaImage.dataset.code || '').toUpperCase()
+
+            if(enteredCode !== expectedCode){
+               event.preventDefault()
+               captchaInput.setCustomValidity('Der Sicherheitscode stimmt nicht.')
+               captchaInput.reportValidity()
+               return
+            }
+
+            captchaInput.setCustomValidity('')
+         })
+      })()
+   </script>
 </body>
 </html>
 
