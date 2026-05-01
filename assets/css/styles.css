@@ -409,15 +409,21 @@ a {
   gap: .85rem;
 }
 
+.startups-form__grid > * {
+  min-width: 0;
+}
+
 .startups-form__field {
   display: grid;
   gap: .4rem;
+  min-width: 0;
 }
 
 .startups-form__field label,
 .startups-form__captcha,
 .startups-form__required {
   color: var(--black-color-lighten);
+  overflow-wrap: anywhere;
 }
 
 .startups-form__field input,
@@ -425,6 +431,9 @@ a {
 .startups-form__field textarea,
 .startups-form__field textarea,
 .startups-form__field input[name="captcha"] {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   border: 1px solid hsl(220, 14%, 80%);
   border-radius: 8px;
   padding: .7rem .75rem;
