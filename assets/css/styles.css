@@ -445,6 +445,23 @@ a {
   margin-top: .35rem;
 }
 
+.startups-form__submit {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #fe0353;
+  color: #fff;
+  font-family: var(--body-font);
+  font-size: .95rem;
+  font-weight: var(--font-semi-bold);
+  padding: .75rem 1rem;
+  cursor: pointer;
+}
+
+.startups-form__submit:hover {
+  opacity: .92;
+}
+
 .startups__section-title {
   margin-top: 1.8rem;
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
