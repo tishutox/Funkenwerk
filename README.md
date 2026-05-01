@@ -1,13 +1,14 @@
-# Responsive Dropdown Menu
-## [Watch it on youtube](https://youtu.be/rlFjsp4BtRA)
-### Dropdown Menu
+# Funkenwerk Webseite
 
-- Responsive Dropdown Menu Using HTML CSS & JavaScript
-- Contains a responsive navigation bar.
-- Contains dropdown menu & a submenu.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices.
+Dieses Repository enthaelt eine ueberarbeitete Webseite fuer das Funkenwerk der Technischen Hochschule Augsburg.
 
-💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
+Im Rahmen einer Aufgabe an der TH Augsburg im Modul **"Grundlagen betrieblicher Informationssysteme"** sollten wir eine Webseite unserer Wahl auswaehlen und gestalterisch sowie strukturell verbessern.
 
-![preview img](/preview.png)
+Wir haben uns fuer die Funkenwerk-Seite entschieden und dabei unter anderem folgende Punkte umgesetzt:
+
+- klarere Seitenstruktur und bessere Lesbarkeit
+- moderne, responsive Darstellung fuer Desktop und Mobile
+- aufgeraeumte Navigation mit Dropdowns
+- inhaltliche Ueberarbeitung einzelner Seiten
+
+Ziel war es, die Inhalte ansprechender zu praesentieren und die Benutzerfreundlichkeit der Seite zu verbessern.
