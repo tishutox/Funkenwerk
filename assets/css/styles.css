@@ -241,6 +241,107 @@ a {
   text-decoration: underline;
 }
 
+.inkubator {
+  margin-top: 2rem;
+}
+
+.inkubator__headline {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  color: var(--black-color);
+}
+
+.inkubator__subheadline {
+  margin-top: .75rem;
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  color: var(--black-color-light);
+}
+
+.inkubator__intro {
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: var(--black-color-lighten);
+}
+
+.inkubator__cta {
+  margin-top: 1rem;
+}
+
+.inkubator__cta a {
+  color: #fe0353;
+  font-weight: var(--font-semi-bold);
+}
+
+.inkubator__cta a:hover {
+  text-decoration: underline;
+}
+
+.inkubator__section-title {
+  margin-top: 1.75rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  color: var(--black-color-light);
+}
+
+.inkubator__grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.inkubator__card {
+  border: 1px solid hsl(220, 15%, 85%);
+  border-radius: 14px;
+  background-color: #fff;
+  padding: 1rem;
+  display: grid;
+  gap: .55rem;
+}
+
+.inkubator__logo {
+  min-height: 3.1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--black-color-lighten);
+  font-size: .88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: .5rem .75rem;
+}
+
+.inkubator__logo-image {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.inkubator__name {
+  color: var(--black-color);
+}
+
+.inkubator__name a {
+  color: inherit;
+}
+
+.inkubator__name a:hover {
+  text-decoration: underline;
+}
+
+.inkubator__meta {
+  color: var(--black-color-lighten);
+  line-height: 1.65;
+}
+
+@media screen and (min-width: 768px) {
+  .inkubator__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media screen and (min-width: 768px) {
   .herventure__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -257,6 +358,10 @@ a {
   }
 
   .herventure {
+    margin-top: 1.5rem;
+  }
+
+  .inkubator {
     margin-top: 1.5rem;
   }
 }
