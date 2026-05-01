@@ -138,10 +138,11 @@ a {
   font-size: 1.3rem;
   line-height: 1;
   color: #fe0353;
+  transition: transform .2s ease;
 }
 
 .team-qa__item[open] .team-qa__question::after {
-  content: "-";
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .team-qa__answer {
