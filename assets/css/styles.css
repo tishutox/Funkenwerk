@@ -941,6 +941,84 @@ a {
   }
 }
 
+/*=============== HOME PAGE ===============*/
+.home {
+  padding: 3rem 0;
+}
+
+.home__headline {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.home__intro {
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.home__intro a {
+  color: #fe0353;
+  font-weight: 600;
+}
+
+.home__subheadline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.home__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.home__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #fe0353;
+}
+
+.home__card-text {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.home__card-link {
+  display: block;
+}
+
+.home__card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+.home__card-link:hover .home__card-image {
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 768px) {
+  .home__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home__headline {
+    font-size: 1.5rem;
+  }
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   position: relative;
