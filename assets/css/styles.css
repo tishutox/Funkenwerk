@@ -244,9 +244,30 @@ a {
   border: 1px solid hsl(220, 15%, 85%);
 }
 
+.beirat-reps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .75rem;
+}
+
+.beirat-reps__card {
+  border: 1px solid hsl(220, 15%, 85%);
+  border-radius: 12px;
+  padding: .85rem 1rem;
+  background-color: #fff;
+}
+
+.beirat-reps__card .team__intro {
+  margin-top: .45rem;
+}
+
 @media screen and (min-width: 768px) {
   .beirat-gallery__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .beirat-reps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
